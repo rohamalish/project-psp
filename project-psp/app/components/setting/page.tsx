@@ -8,7 +8,7 @@ function Setting() {
     return (
         role === "user" ?
             <div className="p-4 flex items-center justify-center min-h-screen bg-red-600">
-                <h2 className="text-2xl font-bold ">not permission</h2>
+                <h2 className="text-2xl font-bold ">no permission</h2>
             </div>
             :
             <div className="p-4 flex items-center justify-center min-h-screen bg-yellow-200">
