@@ -39,7 +39,7 @@ function Menu() {
                 </li>
 
             </ul>
-            <span className='text-sm mt-5 fixed bottom-0 pb-5 text-blue-800'>User role : {state} </span>
+            <span className='text-lg mt-5 fixed bottom-0 pb-5 '>Role : <span className={`${state==="user" ? "text-green-400" :"text-red-500"}`}>{state}</span> </span>
         </nav>
     )
 }
