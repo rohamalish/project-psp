@@ -1,7 +1,5 @@
+
 import React from 'react'
-import Menu from '../menu/page'
-import List from '../list/page'
-import Setting from '../setting/page'
 import { useNewContext } from '../context/newContext'
 
 
