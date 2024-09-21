@@ -1,6 +1,6 @@
 "use client"
 import React, { createContext, useContext, useState, ReactNode } from 'react';
-export type MyStringType = 'admin' | 'user';  
+export type MyStringType = 'admin' | 'user';
 
 interface NewContextType {
     state: MyStringType;
@@ -10,7 +10,8 @@ interface NewContextType {
 const NewContext = createContext<NewContextType | undefined>(undefined);
 
 export const NewContextProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-    const [state, setState] = useState<MyStringType>('admin');
+    const role = localStorage.getItem('role') ?? 'admin'
+    const [state, setState] = useState<MyStringType>(role as MyStringType );
 
     return (
         <NewContext.Provider value={{ state, setState }}>

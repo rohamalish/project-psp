@@ -7,10 +7,13 @@ import { MyStringType, useNewContext } from '../context/newContext';
 
 function Menu() {
     const { state, setState } = useNewContext();
+    
     useEffect(() => {
         setState(localStorage?.getItem("role") as MyStringType)
     }, [localStorage?.getItem("role")])
+
     const pathname = usePathname()
+
     const findActiveMenu = useMemo(() => {
         if (pathname.includes("list"))
             return "listActive"
