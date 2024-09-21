@@ -9,7 +9,7 @@ function Menu() {
     const { state, setState } = useNewContext();
     useEffect(() => {
         setState(localStorage?.getItem("role") as MyStringType)
-    }, [])
+    }, [localStorage?.getItem("role")])
     const pathname = usePathname()
     const findActiveMenu = useMemo(() => {
         if (pathname.includes("list"))
@@ -39,7 +39,7 @@ function Menu() {
                 </li>
 
             </ul>
-            <span className='text-lg mt-5 fixed bottom-0 pb-5 '>Role : <span className={`${state==="user" ? "text-green-400" :"text-red-500"}`}>{state}</span> </span>
+            <span className='text-lg mt-5 fixed bottom-0 pb-5 '>Role : <span className={`${state === "user" ? "text-green-400" : "text-red-500"}`}>{state}</span> </span>
         </nav>
     )
 }
