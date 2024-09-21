@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Menu from "./components/menu/page";
 import ReactQueryProvider from "./ReactQueryProvider";
+import { NewContextProvider } from "./components/context/newContext";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -26,15 +27,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ReactQueryProvider>
-      <html lang="en">
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        >
-          <Menu />
-          {children}
-        </body>
-      </html>
-    </ReactQueryProvider>
+    <NewContextProvider>
+      <ReactQueryProvider>
+        <html lang="en">
+          <body
+            className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+          >
+            <Menu />
+            {children}
+          </body>
+        </html>
+      </ReactQueryProvider>
+    </NewContextProvider>
+
   );
 }
