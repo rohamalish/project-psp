@@ -12,12 +12,12 @@ function Main() {
       <h1>This is Main Page</h1>
       <div className='flex text-lg mt-5'>
         <button
-          className='bg-red-300 rounded p-2 '
+          className='bg-red-300 rounded p-2 hover:bg-red-200'
           onClick={() => {
             setState("admin")
           }}
         >set user role : admin</button>
-        <button className='bg-green-300 rounded p-2 mr-5'
+        <button className='bg-green-300 rounded p-2 mr-5 hover:bg-green-200'
           onClick={() => {
             setState("user")
           }}
