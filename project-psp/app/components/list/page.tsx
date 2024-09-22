@@ -29,7 +29,7 @@ function List() {
                             <tbody>
                                 {
                                     data?.map((item: dataItem) =>
-                                        <tr>
+                                        <tr key={item?.id}>
                                             <td className='border border-slate-700'>{item?.userId}</td>
                                             <td className='border border-slate-700'>{item?.id}</td>
                                             <td className='border border-slate-700'>{item?.title}</td>

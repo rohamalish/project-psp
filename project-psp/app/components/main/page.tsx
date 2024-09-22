@@ -8,7 +8,7 @@ function Main() {
 
   useEffect(() => {
     setState(localStorage.getItem("role") as MyStringType)
-  }, [localStorage.getItem("role")])
+  }, [setState])
   localStorage.setItem("role", state);
   return (
     <div className='bg-stale-50	 min-h-screen flex items-center justify-center text-6xl flex-col'>

@@ -10,7 +10,7 @@ function Menu() {
     
     useEffect(() => {
         setState(localStorage?.getItem("role") as MyStringType)
-    }, [localStorage?.getItem("role")])
+    }, [setState])
 
     const pathname = usePathname()
 
