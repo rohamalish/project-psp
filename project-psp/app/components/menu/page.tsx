@@ -35,7 +35,7 @@ function Menu() {
                         List
                     </Link>
                 </li>
-                <li className={`hover:drop-shadow-md hover:text-red-200 pt-2 ${findActiveMenu === "settingActive" ? "text-gray-900 font-bold" : ""}`}>
+                <li className={` hover:drop-shadow-md hover:text-red-200 pt-2 ${findActiveMenu === "settingActive" ? "text-gray-900 font-bold" : ""} ${state === "user" ? "pointer-events-none" : ""} `}>
                     <Link href="/components/setting">
                         Setting
                     </Link>
